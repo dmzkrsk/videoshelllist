@@ -1,0 +1,47 @@
+HKCR
+{
+	VideoShellList.VSLExt.1 = s 'VSLExt Class'
+	{
+		CLSID = s '{3CA443C1-5F38-45D5-9D7E-7542ADF9E612}'
+	}
+	VideoShellList.VSLExt = s 'VSLExt Class'
+	{
+		CLSID = s '{3CA443C1-5F38-45D5-9D7E-7542ADF9E612}'
+		CurVer = s 'VideoShellList.VSLExt.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {3CA443C1-5F38-45D5-9D7E-7542ADF9E612} = s 'VSLExt Class'
+		{
+			ProgID = s 'VideoShellList.VSLExt.1'
+			VersionIndependentProgID = s 'VideoShellList.VSLExt'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{3CA443C1-5F38-45D5-9D7E-7542ADF9E612}'
+		}
+	}
+
+    NoRemove Directory
+    {
+        NoRemove shellex
+        {
+            NoRemove ContextMenuHandlers
+            {
+                ForceRemove VideoShellList = s '{3CA443C1-5F38-45D5-9D7E-7542ADF9E612}'
+            }
+        }
+    }
+    NoRemove Drive
+    {
+        NoRemove shellex
+        {
+            NoRemove ContextMenuHandlers
+            {
+                ForceRemove VideoShellList = s '{3CA443C1-5F38-45D5-9D7E-7542ADF9E612}'
+            }
+        }
+    }
+}

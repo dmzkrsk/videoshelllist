@@ -1,0 +1,296 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""VideoShellList.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,1,0,0
+ PRODUCTVERSION 1,1,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "VideoShellList Module\0"
+            VALUE "FileVersion", "1, 1, 0, 0\0"
+            VALUE "InternalName", "VideoShellList\0"
+            VALUE "LegalCopyright", "Copyright 2004\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OLESelfRegister", "\0"
+            VALUE "OriginalFilename", "VideoShellList.DLL\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "VideoShellList Module\0"
+            VALUE "ProductVersion", "1, 1, 0, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_VSLEXT              REGISTRY DISCARDABLE    "VSLExt.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PROGRESS DIALOG DISCARDABLE  0, 0, 266, 39
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",PBS_SMOOTH,
+                    7,18,252,14
+    CTEXT           "",IDC_INFO,7,7,252,8
+END
+
+IDD_LIST DIALOG DISCARDABLE  0, 0, 245, 178
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Сохранять файл",IDC_STATIC,7,7,231,77
+    CONTROL         "В выбранной папке",IDC_RADDIR_1,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,18,17,82,10
+    CONTROL         "В текущей папке",IDC_RADDIR_2,"Button",
+                    BS_AUTORADIOBUTTON,18,30,73,10
+    CONTROL         "в ""Моих Документах""",IDC_RADDIR_3,"Button",
+                    BS_AUTORADIOBUTTON,18,42,89,10
+    CONTROL         "В другой",IDC_RADDIR_4,"Button",BS_AUTORADIOBUTTON,18,
+                    52,45,10
+    EDITTEXT        IDC_DIR,32,66,172,12,ES_AUTOHSCROLL
+    GROUPBOX        "Имя файла",IDC_STATIC,7,87,231,55
+    CONTROL         "по имени папки",IDC_RADNAME_1,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,18,98,69,10
+    CONTROL         "постоянное имя",IDC_RADNAME_2,"Button",
+                    BS_AUTORADIOBUTTON,18,110,71,10
+    EDITTEXT        IDC_NAME,32,123,172,12,ES_AUTOHSCROLL
+    CONTROL         "Открыть файл после записи",IDC_OPENAFTERALL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,153,113,10
+END
+
+IDD_INFO DIALOG DISCARDABLE  0, 0, 288, 158
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_LIST1,7,23,115,128,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST2,166,23,115,128,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CTEXT           "Экспортировать",IDC_STATIC,15,8,102,8
+    CTEXT           "Не экспортировать",IDC_STATIC,179,8,102,8
+    PUSHBUTTON      "",IDC_ADD,128,23,32,32,BS_ICON
+    PUSHBUTTON      "",IDC_REMOVE,128,119,32,32,BS_ICON
+    PUSHBUTTON      "",IDC_MOVE_UP,128,55,32,32,BS_ICON
+    PUSHBUTTON      "",IDC_MOVE_DOWN,128,87,32,32,BS_ICON
+END
+
+IDD_ABOUT DIALOG DISCARDABLE  0, 0, 263, 129
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Video List Shell Extension v1.1\n\t(c) 2004 Трофимов Алексей.",
+                    IDC_STATIC,54,15,202,18
+    LTEXT           "Замечания, пожелания слать на мыло\n\nЕсли нужна поддержка нового формата плей-листов - шлите пример или описание формата на мыло.",
+                    IDC_STATIC,54,40,202,39
+    PUSHBUTTON      "trofimov@kspu.ru",IDC_MAIL,180,108,76,14,BS_FLAT
+END
+
+IDD_EXTENSIONS DIALOG DISCARDABLE  0, 0, 283, 170
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EXTENSION,113,149,109,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Добавить",IDC_ADDEXT,226,149,50,14
+    CONTROL         "List2",IDC_EXTLIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SORTASCENDING | LVS_ALIGNLEFT | 
+                    LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,23,269,123
+    LTEXT           "Расширения, которые будет обрабатывать программа",
+                    IDC_STATIC,12,11,186,8
+    PUSHBUTTON      "Удалить",IDC_DELEXT,7,149,50,14
+    PUSHBUTTON      "Удалить всё",IDC_DELEXTALL,61,149,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_PROGRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 259
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 32
+    END
+
+    IDD_LIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 238
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 171
+    END
+
+    IDD_INFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 281
+        TOPMARGIN, 8
+        BOTTOMMARGIN, 151
+    END
+
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 256
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 122
+    END
+
+    IDD_EXTENSIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 163
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_MENU                BITMAP  DISCARDABLE     "res\\bitmap1.bmp"
+IDB_TOOLS               BITMAP  DISCARDABLE     "res\\bmp00001.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_SETUP               ICON    DISCARDABLE     "res\\icon1.ico"
+IDI_AUP                 ICON    DISCARDABLE     "res\\ico00001.ico"
+IDI_ADW                 ICON    DISCARDABLE     "res\\ico00002.ico"
+IDI_ALT                 ICON    DISCARDABLE     "res\\ico00003.ico"
+IDI_ARH                 ICON    DISCARDABLE     "res\\ico00004.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "VideoShellList"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_LIGHTALLOYPLAYLIST   "IDM_PLAY_LA"
+    IDM_PLAY_LA             "Список видео для проигрывания в Light Alloy"
+    IDM_PLAY_LST            "Простой список файлов"
+    ID_HTML                 "Веб-страница с подробной информацией о файлах"
+    IDM_LIST_XLS            "Список файлов в Excel"
+    IDM_LIST_TXT            "Список в обычном текстовом файле"
+    IDM_CONF                "Настройка"
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "VideoShellList.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

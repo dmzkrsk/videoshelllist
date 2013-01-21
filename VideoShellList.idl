@@ -1,0 +1,38 @@
+// VideoShellList.idl : IDL source for VideoShellList.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (VideoShellList.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(0F2226A1-47FC-47F2-B01D-C8DDC2CA1949),
+		dual,
+		helpstring("IVSLExt Interface"),
+		pointer_default(unique)
+	]
+	interface IVSLExt : IDispatch
+	{
+	};
+
+[
+	uuid(98BB44E8-4949-4E05-8A65-B390F2D1103B),
+	version(1.0),
+	helpstring("VideoShellList 1.0 Type Library")
+]
+library VIDEOSHELLLISTLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(3CA443C1-5F38-45D5-9D7E-7542ADF9E612),
+		helpstring("VSLExt Class")
+	]
+	coclass VSLExt
+	{
+		[default] interface IVSLExt;
+	};
+};
